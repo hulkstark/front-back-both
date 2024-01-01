@@ -7,7 +7,7 @@ var bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 const JWT_SECRET = "mysimplesecret"
 
-// Route 1: create a user with POST request : http://localhost:5000/api/auth/createuser
+// Route 1: create a user with POST request : https://front-back-both-server.vercel.app/api/auth/createuser
 router.post(
   "/createuser",
   [
