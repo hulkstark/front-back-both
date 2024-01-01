@@ -10,6 +10,11 @@ connectToMongo(); // Connect to MongoDB
 app.use(cors());
 app.use(express.json());
 
+// Define a route handler for the root path
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
 // Use the auth routes
 app.use("/api/auth", require("./routes/auth"));
 
