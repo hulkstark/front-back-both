@@ -74,7 +74,7 @@ router.post(
 );
 
 
-// Route 2: Authenticate an existing user to login: https://front-back-both-client.vercel.app/api/auth/userlogin
+// Route 2: Authenticate an existing user to login: https://front-back-both-server.vercel.app/api/auth/userlogin
 router.post(
   "/userlogin",
   [
@@ -126,7 +126,7 @@ router.post(
 
 
 
-// Route 3: Get details of logged-in user using POST: https://front-back-both-client.vercel.app/api/auth/logindetails
+// Route 3: Get details of logged-in user using POST: https://front-back-both-server.vercel.app/api/auth/logindetails
 router.post("/logindetails", authMiddleware, async (req, res) => {
   try {
     // The user ID is available in req.user.id due to the authMiddleware
