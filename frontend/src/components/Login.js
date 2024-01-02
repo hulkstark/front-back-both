@@ -16,10 +16,12 @@ const Login = (props) => {
     try {
       const response = await fetch('https://front-back-both-server.vercel.app/api/auth/userlogin', {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email: credentials.email, password: credentials.password }),
+
       });
 
       if (!response.ok) {

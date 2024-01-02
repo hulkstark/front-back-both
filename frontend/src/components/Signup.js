@@ -22,10 +22,12 @@ const Signup = (props) => {
     try {
       const response = await fetch('https://front-back-both-server.vercel.app/api/auth/createuser', {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ name, email, password}),
+       
       });
 
       if (!response.ok) {
