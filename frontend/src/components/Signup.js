@@ -20,7 +20,7 @@ const Signup = (props) => {
     }
     const {name, email, password} = credentials;
     try {
-      const response = await fetch('https://front-back-both-client.vercel.app/api/auth/createuser', {
+      const response = await fetch('https://front-back-both-server.vercel.app/api/auth/createuser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
