@@ -9,8 +9,9 @@ connectToMongo(); // Connect to MongoDB
 
 app.use(cors({
   origin: ["https://front-back-both-client.vercel.app"],
-methods: ["POST", "GET"],
-credentials: true
+  methods: ["POST", "GET"],
+  credentials: true,
+  optionsSuccessStatus: 204  // Add this line
 }));
 app.use(express.json());
 
