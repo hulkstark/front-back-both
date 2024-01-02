@@ -8,7 +8,7 @@ const port = 5000;
 connectToMongo(); // Connect to MongoDB
 
 app.use(cors({
-  origin: ["https://front-back-both-client.vercel.app"],
+  origin: ["*"],
   methods: ["POST", "GET"],
   credentials: true,
   optionsSuccessStatus: 204  // Add this line
