@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: "https://front-back-both-client.vercel.app",
+  origin: "*",
   methods: ["POST", "GET"],
   credentials: true,
   optionsSuccessStatus: 204  // Add this line
