@@ -18,6 +18,7 @@ app.use(express.json());
 // Define a route handler for the root path
 app.get('/', (req, res) => {
   res.send('Hello, World!');
+  res.header("Access-Control-Allow-Origin", "https://front-back-both-client.vercel.app/")
 });
 
 // Use the auth routes
