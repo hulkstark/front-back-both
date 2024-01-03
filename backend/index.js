@@ -5,8 +5,6 @@ const cors = require("cors");
 const app = express();
 const port = 5000;
 
-connectToMongo(); // Connect to MongoDB
-
 app.use(cors({
   origin: "https://front-back-both-client.vercel.app",
   methods: ["POST", "GET"],
@@ -14,6 +12,10 @@ app.use(cors({
   optionsSuccessStatus: 204  // Add this line
 }));
 app.use(express.json());
+
+connectToMongo(); // Connect to MongoDB
+
+
 
 // Define a route handler for the root path
 app.get('/', (req, res) => {
