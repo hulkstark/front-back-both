@@ -18,6 +18,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Skills from "./components/Skills";
 import Podcast from "./components/Podcast";
+import Resume from "./components/Resume";
 
 
 
@@ -76,6 +77,9 @@ function App() {
           </Routes>
           <Routes>
           <Route path="/images" element={<Image/>} />
+          <Route path="/resume" element={<Resume/>}/>
+          </Routes>
+          <Routes>
 
           
           </Routes>
