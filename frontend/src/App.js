@@ -19,6 +19,7 @@ import Signup from "./components/Signup";
 import Skills from "./components/Skills";
 import Podcast from "./components/Podcast";
 import Resume from "./components/Resume";
+import Intro from "./components/Intro";
 
 
 
@@ -73,13 +74,18 @@ function App() {
           <Route path="/coverletter" element={<CoverLetter/>} />
           </Routes>
           <Routes>
+          <Route path="/resume" element={<Resume/>} />
+          </Routes>
+          <Routes>
           <Route path="/serps" element={<Serp/>}/>
           </Routes>
           <Routes>
           <Route path="/images" element={<Image/>} />
-          <Route path="/resume" element={<Resume/>}/>
+
+          
           </Routes>
           <Routes>
+          <Route path="/intro" element={<Intro/>} />
 
           
           </Routes>
@@ -100,7 +106,7 @@ function App() {
           </Routes>
 
           <Routes>
-          <Route path="/podcast" element={<Podcast showAlert={showAlert}/>} />
+          <Route path="/about" element={<About showAlert={showAlert}/>} />
           </Routes>
 
           <Routes>

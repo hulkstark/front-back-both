@@ -62,7 +62,7 @@ const styles = {
   coverLetter: {
     width: '100%',
     maxWidth: '1294px',
-    backgroundColor: '#fff',
+    backgroundColor: '#4287f5',
     padding: '20px',
     borderRadius: '8px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
