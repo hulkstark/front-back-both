@@ -5,6 +5,6 @@
     "src": "/(.*)", 
     "dest": "/index.js", 
     "methods": ["GET", "POST", "DELETE", "PATCH", "OPTIONS"],
-    "headers": {"Access-Control-Allow-Origin": "*"}
+    "headers": {"Access-Control-Allow-Origin": "https://front-back-both-client.vercel.app/"}
   }]
 }
