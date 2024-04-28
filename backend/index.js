@@ -9,7 +9,7 @@ const port = 5000;
 const corsOptions = {
   origin: "https://front-back-both-client.vercel.app",
   methods: ["GET", "POST", "DELETE", "PATCH", "OPTIONS"],
-  credentials: true,
+  credentials: true, // Ensure credentials are allowed
   optionsSuccessStatus: 204 // No Content
 };
 
