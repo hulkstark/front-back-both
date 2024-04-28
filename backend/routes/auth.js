@@ -33,7 +33,6 @@ router.post(
     }
 
     try {
-      
       // Hash and salt the user's password
       const salt = await bcrypt.genSalt(10); // You can configure the number of salt rounds as needed
       const hashedPassword = await bcrypt.hash(req.body.password, salt);
@@ -44,27 +43,27 @@ router.post(
         email: req.body.email,
         password: hashedPassword,
       });
-      
-
-      
 
       // Save the user to the database
       await newUser.save();
 
-      // Generate a JWT token for the user  
+      // Generate a JWT token for the user
       const data = {
         user: {
-          id: newUser._id
-        }
-      }
+          id: newUser._id,
+        },
+      };
 
       var token = jwt.sign(data, JWT_SECRET);
-      console.log(token)
-
-      
+      console.log(token);
 
       // Send a success response with the token
-      success= true;
+      success = true;
+
+      // Set CORS headers
+      res.header('Access-Control-Allow-Origin', 'https://front-back-both-client.vercel.app');
+      res.header('Access-Control-Allow-Credentials', 'true');
+
       res.status(201).json({ success, message: "User created successfully", token });
     } catch (error) {
       console.error(error);
