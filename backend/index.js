@@ -5,17 +5,15 @@ const cors = require("cors");
 const app = express();
 const port = 5000;
 
-// Custom CORS middleware
-const customCors = (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://front-back-both-client.vercel.app");
-  res.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PATCH, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.header("Access-Control-Allow-Credentials", "true"); // Ensure credentials are allowed
-  next();
+// CORS configuration
+const corsOptions = {
+  origin: "https://front-back-both-client.vercel.app",
+  methods: ["GET", "POST", "DELETE", "PATCH", "OPTIONS"],
+  credentials: true, // Ensure credentials are allowed
 };
 
-// Use custom CORS middleware
-app.use(customCors);
+// Use CORS middleware
+app.use(cors(corsOptions));
 
 // Body parsing middleware
 app.use(express.json());
